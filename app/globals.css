@@ -1,5 +1,48 @@
 @import "tailwindcss";
 
-*{
-  font-family: Outfit;
+:root {
+  --color-primary: #1E40AF;
+  --color-primary-light: #3B82F6;
+  --color-primary-hover: #2563EB;
+  --color-primary-dark: #1E3A8A;
+  --color-primary-dark-hover: #1E40AF;
+
+  --font-outfit: 'Outfit';
+  --font-ovo: 'Ovo';
+}
+
+.dark {
+  --color-primary: var(--color-primary-dark);
+  --color-primary-hover: var(--color-primary-dark-hover);
+}
+
+/* Global font */
+* {
+  font-family: var(--font-outfit);
+}
+
+/* Utility classes */
+.font-outfit {
+  font-family: var(--font-outfit);
+}
+
+.font-ovo {
+  font-family: var(--font-ovo);
+}
+
+/* Color utility classes if you want them */
+.bg-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-primary-hover:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.border-primary {
+  border-color: var(--color-primary);
 }
