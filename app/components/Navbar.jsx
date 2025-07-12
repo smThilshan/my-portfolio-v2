@@ -5,13 +5,6 @@ import { useState } from "react";
 
 const Navbar = () => {
   const sideMenuRef = useRef();
-  //   const openMenu = () => {
-  //     sideMenuRef.current.style.transform = "translateX(-16rem)";
-  //   };
-
-  //   const closeMenu = () => {
-  //     sideMenuRef.current.style.transform = "translateX(16rem)";
-  //   };
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [isScroll, setIsScroll] = useState(false);
