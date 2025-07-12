@@ -1,16 +1,23 @@
 import { assets } from "@/assets/assets";
 import React, { useRef } from "react";
 import Image from "next/image";
+import { useState } from "react";
+
 
 const Navbar = () => {
   const sideMenuRef = useRef();
-  const openMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(-16rem)";
-  };
+//   const openMenu = () => {
+//     sideMenuRef.current.style.transform = "translateX(-16rem)";
+//   };
 
-  const closeMenu = () => {
-    sideMenuRef.current.style.transform = "translateX(16rem)";
-  };
+//   const closeMenu = () => {
+//     sideMenuRef.current.style.transform = "translateX(16rem)";
+//   };
+const [menuOpen, setMenuOpen] = useState(false);
+
+const openMenu = () => setMenuOpen(true);
+const closeMenu = () => setMenuOpen(false);
+
 
   return (
     <>
@@ -82,10 +89,13 @@ const Navbar = () => {
 
         {/* Mobile Nav */}
 
-        <ul
-          ref={sideMenuRef}
-          className="flex md:hidden flex-col gap-4 py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition duration-500"
-        >
+<ul
+  className={`
+    flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition-transform duration-500
+    ${menuOpen ? 'translate-x-0 right-0' : 'translate-x-full right-0'}
+  `}
+>
+
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <Image
               src={assets.close_black}
@@ -96,31 +106,31 @@ const Navbar = () => {
 
           <li>
             {" "}
-            <a href="" className="font-ovo" onClick={closeMenu}>
+            <a href="" className="font-ovo" onClick={() => setMenuOpen(false)}>
               Home
             </a>{" "}
           </li>
           <li>
             {" "}
-            <a href="" className="font-ovo" onClick={closeMenu}>
+            <a href="" className="font-ovo" onClick={() => setMenuOpen(false)}>
               About me
             </a>{" "}
           </li>
           <li>
             {" "}
-            <a href="" className="font-ovo" onClick={closeMenu}>
+            <a href="" className="font-ovo" onClick={() => setMenuOpen(false)}>
               Services
             </a>{" "}
           </li>
           <li>
             {" "}
-            <a href="" className="font-ovo" onClick={closeMenu}>
+            <a href="" className="font-ovo"onClick={() => setMenuOpen(false)}>
               My Work
             </a>{" "}
           </li>
           <li>
             {" "}
-            <a href="" className="font-ovo" onClick={closeMenu}>
+            <a href="" className="font-ovo" onClick={() => setMenuOpen(false)}>
               Contact me
             </a>{" "}
           </li>
