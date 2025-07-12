@@ -1,30 +1,44 @@
 import { assets } from "@/assets/assets";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 import { useState } from "react";
 
-
 const Navbar = () => {
   const sideMenuRef = useRef();
-//   const openMenu = () => {
-//     sideMenuRef.current.style.transform = "translateX(-16rem)";
-//   };
+  //   const openMenu = () => {
+  //     sideMenuRef.current.style.transform = "translateX(-16rem)";
+  //   };
 
-//   const closeMenu = () => {
-//     sideMenuRef.current.style.transform = "translateX(16rem)";
-//   };
-const [menuOpen, setMenuOpen] = useState(false);
+  //   const closeMenu = () => {
+  //     sideMenuRef.current.style.transform = "translateX(16rem)";
+  //   };
 
-const openMenu = () => setMenuOpen(true);
-const closeMenu = () => setMenuOpen(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isScroll, setIsScroll] = useState(false);
 
+  const openMenu = () => setMenuOpen(true);
+  const closeMenu = () => setMenuOpen(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      if (scrollY > 50) {
+        setIsScroll(true);
+      } else {
+        setIsScroll(false);
+      }
+    });
+  }, []);
 
   return (
     <>
       <div className="fixed top-0 right-0 w-11/12 -z-10 translate-y-[-80%]">
         <Image src={assets.header_bg_color} alt="" className="w-full" />
       </div>
-      <nav className="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+      <nav
+        className={`w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ${
+          isScroll ? "bg-white bg-opacity-50 backdrop-blur-lg shadow-sm" : ""
+        }`}
+      >
         <a href="#top">
           <Image
             src={assets.logo}
@@ -32,36 +46,35 @@ const closeMenu = () => setMenuOpen(false);
             alt="logo-img"
           />
         </a>
-        <ul className="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50">
+        <ul
+          className={`hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 ${
+            isScroll ? "" : "bg-white shadow-sm bg-opacity-50"
+          }`}
+        >
           <li>
-            {" "}
-            <a href="" className="font-ovo">
+            <a href="#top" className="font-ovo">
               Home
-            </a>{" "}
+            </a>
           </li>
           <li>
-            {" "}
-            <a href="" className="font-ovo">
+            <a href="#about" className="font-ovo">
               About me
-            </a>{" "}
+            </a>
           </li>
           <li>
-            {" "}
-            <a href="" className="font-ovo">
+            <a href="#services" className="font-ovo">
               Services
-            </a>{" "}
+            </a>
           </li>
           <li>
-            {" "}
-            <a href="" className="font-ovo">
+            <a href="#work" className="font-ovo">
               My Work
-            </a>{" "}
+            </a>
           </li>
           <li>
-            {" "}
-            <a href="" className="font-ovo">
+            <a href="#contact" className="font-ovo">
               Contact me
-            </a>{" "}
+            </a>
           </li>
         </ul>
         <div className="flex items-center gap-4">
@@ -89,13 +102,12 @@ const closeMenu = () => setMenuOpen(false);
 
         {/* Mobile Nav */}
 
-<ul
-  className={`
+        <ul
+          className={`
     flex md:hidden flex-col gap-4 py-20 px-10 fixed top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 transition-transform duration-500
-    ${menuOpen ? 'translate-x-0 right-0' : 'translate-x-full right-0'}
+    ${menuOpen ? "translate-x-0 right-0" : "translate-x-full right-0"}
   `}
->
-
+        >
           <div className="absolute right-6 top-6" onClick={closeMenu}>
             <Image
               src={assets.close_black}
@@ -124,7 +136,7 @@ const closeMenu = () => setMenuOpen(false);
           </li>
           <li>
             {" "}
-            <a href="" className="font-ovo"onClick={() => setMenuOpen(false)}>
+            <a href="" className="font-ovo" onClick={() => setMenuOpen(false)}>
               My Work
             </a>{" "}
           </li>
