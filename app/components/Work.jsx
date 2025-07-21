@@ -8,11 +8,10 @@ const Work = () => {
       <h4 className="text-center mb-2 text-lg font-ovo">My Portfolio</h4>
       <h2 className="text-center text-5xl font-ovo">My latest work</h2>
       <p className="text-center mx-auto mt-5 mb-12 max-w-2xl font-ovo">
-        I am a passionate full-stack developer with experience in building
-        modern, responsive web and mobile applications. I enjoy solving complex
-        problems, learning new technologies, and creating clean, maintainable
-        code. My goal is to deliver high-quality software that provides a great
-        user experience and helps businesses grow.
+        Explore a selection of projects that highlight my expertise in full-stack development. 
+        From intuitive user interfaces to robust backend systems, these works reflect my 
+        commitment to delivering clean, scalable, and high-performance applications across 
+        web and mobile platforms.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 my-10">
@@ -34,7 +33,7 @@ const Work = () => {
           </div>
         ))}
       </div>
-      <a href="" className="w-max flex items-center justify-center gap-2 text-gray-500 border-[0.5px] border-gray-500 rounded-full py-3 px-10 mx-auto my-20 bg-primary-hover duration-500">Show more
+      <a href="/projects" className="w-max flex items-center justify-center gap-2 text-gray-500 border-[0.5px] border-gray-500 rounded-full py-3 px-10 mx-auto my-20 bg-primary-hover duration-500">Show more
         <Image src={assets.right_arrow_bold} alt="right-arrow" className="w-4"/>
       </a>
     </div>

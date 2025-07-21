@@ -68,8 +68,21 @@ import postman_logo from "./postman-logo.png";
 import udacity_logo from "./udacity.png";
 import nvq_logo from "./nvq-logo.png";
 import isoft_logo from "./isoft-logo.png";
-
-
+import full_stack_logo from "./icons8-full-stack-64.png";
+import api_integration_logo from "./icons8-api-64.png";
+import sfa_photo from "./sfa.png";
+import car_rental_photo from "./car-rental.png";
+import auto_expert_photo from "./auto-expert.png";
+import prisma_orm_photo from "./icons8-prisma-orm.svg";
+import bus_tracker_photo from "./bus-tracker.png";
+import portfolio_v1_photo from "./portfolio-v1.png";
+import portfolio_v2_photo from "./portfolio-v2.png";
+import ai_mail_reply_photo from "./ai-mail-reply.png";
+import ai_react_reply_photo from "./ai-react-reply.png";
+import spotify_clone_photo from "./spotify-clone.png";
+import sdp_mobileapp_photo from "./sdp-mobile-app.png";
+import php_admin_panel from "./php-admin-panel.png";
+import doctor_photo from "./doctor.png";
 
 export const assets = {
   user_image,
@@ -141,7 +154,22 @@ export const assets = {
   postman_logo,
   udacity_logo,
   nvq_logo,
-  isoft_logo
+  isoft_logo,
+  full_stack_logo,
+  api_integration_logo,
+  sfa_photo,
+  car_rental_photo,
+  auto_expert_photo,
+  prisma_orm_photo,
+  bus_tracker_photo,
+  portfolio_v1_photo,
+  portfolio_v2_photo,
+  ai_mail_reply_photo,
+  ai_react_reply_photo,
+  spotify_clone_photo,
+  sdp_mobileapp_photo,
+  php_admin_panel,
+  doctor_photo,
 };
 
 export const workData = [
@@ -170,28 +198,31 @@ export const workData = [
 export const serviceData = [
   {
     icon: assets.web_icon,
-    title: "Web design",
-    description: "Web development is the process of building, programming...",
+    title: "Web Design & Development",
+    description:
+      "Creating responsive and modern websites using Nextjs, React, Tailwind, and Figma with best UI/UX practices.",
+
     link: "",
   },
   {
     icon: assets.mobile_icon,
-    title: "Mobile app",
+    title: "Mobile App",
     description:
-      "Mobile app development involves creating software for mobile devices...",
+      "Building fast and reliable mobile apps with Flutter or React Native for both Android and iOS.",
     link: "",
   },
   {
-    icon: assets.ui_icon,
-    title: "UI/UX design",
+    icon: assets.full_stack_logo,
+    title: "Full Stack Development",
     description:
-      "UI/UX design focuses on creating a seamless user experience...",
+      "Developing complete web apps using the MERN stack, Springboot & Laravel with clean and scalable code.",
     link: "",
   },
   {
-    icon: assets.graphics_icon,
-    title: "Graphics design",
-    description: "Creative design solutions to enhance visual communication...",
+    icon: assets.api_integration_logo,
+    title: "API Integration & Deployment",
+    description:
+      "Integrating APIs and deploying apps with tools like Aws, Firebase, Git, Vercel and Render.",
     link: "",
   },
 ];
@@ -222,37 +253,169 @@ export const infoList = [
 
 export const projectsList = [
   {
-    name: "Portfolio Website",
+    name: "Auto Expert ERP ",
+    description:
+      "A comprehensive ERP solution tailored for automobile services specially for truck, developed using Next.js and Tailwind CSS. It streamlines operations including customer management, service tracking, invoicing, and reporting.",
+    tech: [
+      "Next.js",
+      "Tailwind CSS",
+      "Shadecn",
+      "Node.js",
+      "Express",
+      "MySQL",
+      "Axios",
+      "JWT",
+      "REST API",
+      "Swagger",
+      "Postman",
+    ],
+    image: assets.auto_expert_photo,
+    // liveLink: "https://yourportfolio.com",
+    // repoLink: "https://github.com/yourname/portfolio",
+  },
+  {
+    name: "Rent A Car Web App",
+    description:
+      "Full-stack car rental platform with user & owner dashboards, built using modular architecture and role-based access.",
+    tech: [
+      "React",
+      "Vite",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "Firebase",
+      "App Context",
+    ],
+    image: assets.car_rental_photo,
+    liveLink:
+      "https://car-rental-front-kh96ydo5v-thilshans-projects.vercel.app/",
+    repoLink: "https://github.com/smThilshan/car-rental-front-end.git",
+  },
+
+  {
+    name: "Bus Tracker",
+    description:
+      "A cross-platform mobile app for managing daily bus operations, including route tracking, income/expense logging, and staff management. Built using Flutter with Firebase for real-time data sync and authentication.",
+    tech: [
+      "Flutter",
+      "Firebase",
+      "Cloud Firestore",
+      "Provider",
+      "Clean Structure",
+    ],
+    image: assets.bus_tracker_photo,
+    // liveLink: "https://yourportfolio.com",
+    repoLink: "https://github.com/smThilshan/Vehicle-Maintenance-Tracker.git",
+  },
+  {
+    name: "SFA & RD Mobile App",
+    description:
+      "Flutter-based mobile application for Sales Force Automation and Retail Distribution, featuring real-time data sync and role-based user access.",
+    tech: [
+      "Flutter",
+      "Provider",
+      "Shared preferences",
+      "Laravel",
+      "Authentication",
+      "Material UI",
+      "Figma",
+    ],
+    image: assets.sfa_photo,
+    // liveLink: "https://yourportfolio.com",
+    // repoLink: "https://github.com/yourname/portfolio",
+  },
+
+  {
+    name: "Doctor Appointment Booking Mobile App",
+    description:
+      "Flutter-based doctor appointment booking app with Laravel backend and MySQL database. Features include user login, booking, cancellation, and doctor schedule management.",
+    tech: ["Flutter", "Provider", "Laravel", "MySQL"],
+    image: assets.doctor_photo,
+    // liveLink: "https://yourportfolio.com",
+    repoLink: "https://github.com/smThilshan/doctor-appointment-backend.git",
+  },
+
+  {
+    name: "Portfolio Website V-1",
     description:
       "A personal portfolio site built with Next.js and Tailwind CSS.",
-    tech: ["Next.js", "Tailwind CSS"],
-    image: assets.figma,
-    liveLink: "https://yourportfolio.com",
-    repoLink: "https://github.com/yourname/portfolio",
+    tech: ["React.js", "Threejs", "3D"],
+    image: assets.portfolio_v1_photo,
+    liveLink: "https://smthilshan.github.io/my-3d-portfolio/",
+    repoLink: "https://github.com/smThilshan/my-3d-portfolio.git",
   },
   {
-    name: "E-commerce App",
-    description: "Cross-platform shopping app built with Flutter.",
-    tech: ["Flutter", "Firebase"],
-    image: assets.figma,
-    liveLink: "https://yourportfolio.com",
-    repoLink: "https://github.com/yourname/portfolio",
-  },
-  {
-    name: "Admin Dashboard",
-    description: "Responsive admin panel with user management.",
-    tech: ["React", "Node.js", "MongoDB"],
-    image: assets.figma,
-    liveLink: "https://yourportfolio.com",
-    repoLink: "https://github.com/yourname/portfolio",
-  },
-    {
-    name: "Admin Dashboard",
-    description: "Responsive admin panel with user management.",
-    tech: ["React", "Node.js", "MongoDB"],
-    image: assets.figma,
+    name: "Portfolio Website V-2",
+    description:
+      "A personal responsive portfolio site built with Next.js and Tailwind CSS with dark mode and new trend",
+    tech: ["Next.js", "Tailwind CSS", "PrebuitUI", "Vercel"],
+    image: assets.portfolio_v2_photo,
     // liveLink: "https://yourportfolio.com",
-    repoLink: "https://github.com/yourname/portfolio",
+    repoLink: "https://github.com/smThilshan/my-portfolio-v2.git",
+  },
+
+  {
+    name: "AI Email Writer Web",
+    description:
+      "A web-based AI email assistant built with React.js and Spring Boot, where users can paste email content, select a tone (Casual, Formal, Extra), and generate intelligent replies using the Google Gemini API.",
+    tech: ["React", "Spring Boot", "Spring AI", "Google Gemini API"],
+    image: assets.ai_react_reply_photo,
+    // liveLink: "https://yourportfolio.com",
+    repoLink: "https://github.com/smThilshan/email-writer-react.git",
+  },
+  {
+    name: "AI Email Auto Reply",
+    description:
+      "A Chrome Extension that integrates with Gmail and adds an 'AI Reply' button beside native reply options to auto-generate context-aware email responses using the Google Gemini API and Spring AI backend.",
+    tech: [
+      "Java",
+      "Spring Boot",
+      "Spring AI",
+      "Chrome Extension",
+      "Google Gemini API",
+      "WebSocket",
+    ],
+    image: assets.ai_mail_reply_photo,
+    // liveLink: "https://yourportfolio.com",
+    repoLink: "https://github.com/smThilshan/ai-email-writer.git",
+  },
+
+  {
+    name: "Spotify Clone",
+    description:
+      "A music streaming web app built with React and Firebase, featuring real-time playback, playlist creation, and user authentication.",
+    tech: ["React", "Firebase", "Tailwind CSS"],
+    image: assets.spotify_clone_photo,
+    // liveLink: "https://yourportfolio.com",
+    repoLink: "https://github.com/smThilshan/spotify_clone.git",
+  },
+
+  {
+    name: "Wildlife & Forestry Reporting App",
+    description:
+      "Flutter-based mobile app designed for reporting and monitoring incidents related to wildlife and forestry. Supports GPS location tagging, image attachments, offline data capture, and secure role-based access for field officers and administrators.",
+    tech: [
+      "Flutter",
+      "Provider",
+      "Shared Preferences",
+      "Firebase",
+      "Authentication",
+      "Material UI",
+      "Figma",
+    ],
+    image: assets.sdp_mobileapp_photo,
+    // liveLink: "https://yourportfolio.com",
+    repoLink: "https://github.com/smThilshan/sdp-mobileapp.git",
+  },
+
+  {
+    name: "PHP - Admin Dashboard",
+    description:
+      "Custom-built responsive admin dashboard using PHP with user authentication, role management, and analytics panels.",
+    tech: ["PHP", "MySQL", "Bootstrap"],
+    image: assets.php_admin_panel,
+    // liveLink: "https://yourportfolio.com",
+    // repoLink: "https://github.com/yourname/php-admin-dashboard",
   },
 ];
 
@@ -282,6 +445,7 @@ export const languageList = [
   { name: "Sqlite", icon: assets.sqlite_sql_icon },
   { name: "Postgres", icon: assets.postgress_sql_icon },
 
+  { name: "Prisma ORM", icon: assets.prisma_orm_photo },
   { name: "Bootstrap", icon: assets.bootstrap_icon },
 ];
 

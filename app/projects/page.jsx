@@ -16,7 +16,7 @@ export default function Projects() {
                      <Image src={assets.header_bg_color} alt="" className="w-full" />
                    </div>
         <Breadcrumb items={breadcrumbItems} />
-      <h2 className="text-center text-4xl sm:text-5xl font-ovo mb-12">Projects</h2>
+      <h2 className="text-center text-4xl sm:text-5xl font-ovo mb-12">Key Projects</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
         {projectsList.map((project, i) => (

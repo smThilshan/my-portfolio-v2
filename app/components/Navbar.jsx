@@ -55,7 +55,7 @@ const Navbar = () => {
             </a>
           </li>
           <li>
-            <a href="#services" className="font-ovo">
+            <a href="#service" className="font-ovo">
               Services
             </a>
           </li>
